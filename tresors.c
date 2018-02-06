@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <time.h>
 #include "rogue_like.h"
-a
+
 char tresor(char mat[][], int longueur, int largeur) {
 	srand(time(NULL));
 	int i=0; int j=0;
@@ -11,3 +11,4 @@ char tresor(char mat[][], int longueur, int largeur) {
 	mat[i][j]='€';
 	return mat;
 }
+
