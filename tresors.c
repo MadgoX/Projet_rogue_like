@@ -3,12 +3,18 @@
 #include <time.h>
 #include "rogue_like.h"
 
-char tresor(char mat[][], int longueur, int largeur) {
+int tresorx(int longueur) {
 	srand(time(NULL));
-	int i=0; int j=0;
-	i=rand()%longueur-2; j=rand()%largeur-2;
-	i++; j++;
-	mat[i][j]='€';
-	return mat;
+	int i=0;
+	i=rand()%(longueur-2);
+	i++;
+	return i;
 }
 
+int tresory(int largeur) {
+	srand(time(NULL));
+	int i=0;
+	i=rand()%(largeur-2);
+	i++;
+	return i;
+}
