@@ -5,4 +5,5 @@
 #define M 50
 
 void creer_map(char matrice[N][M]);
-char tresor(char matrice[][], int longueur, int largeur);
+int tresorx(int longueur);
+int tresory(int largeur);
