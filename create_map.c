@@ -4,10 +4,10 @@
 #include"rogue_like.h"
 
 
-void creer_map(char matrice[][], const int N, const int M)
+void creer_map(char matrice[N][M])
 {
 
-	int i, j;
+	int i, j, tresx, tresy;
 	char res;
 	
 	for(i=0; i<N; i++){
@@ -52,6 +52,10 @@ void creer_map(char matrice[][], const int N, const int M)
 	j=M-1;
 	matrice[i][j]='+';
 
+	tresx=tresorx(N);
+	tresy=tresory(M);
+	matrice[tresx][tresy]='o';
+
 	for(i=0; i<N; i++){
 		for(j=0; j<M; j++){
 			res=matrice[i][j];
@@ -59,5 +63,11 @@ void creer_map(char matrice[][], const int N, const int M)
 		}
 		printf("\n");
 	}
+
 }
 
+int main() {
+	char matrice[N][M];
+	creer_map(matrice);
+	return 0;
+}
