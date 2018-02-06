@@ -4,7 +4,7 @@
 #include"rogue_like.h"
 
 
-void creer_map(char matrice[N][M], const int N, const int M)
+void creer_map(char matrice[N][M])
 {
 
 	int i, j;
