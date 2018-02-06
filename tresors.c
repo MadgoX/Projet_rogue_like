@@ -18,3 +18,4 @@ int tresory(int largeur) {
 	i++;
 	return i;
 }
+//
