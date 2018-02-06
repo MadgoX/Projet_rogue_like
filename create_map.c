@@ -1,10 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
-#include"rogue_like.h"
 
 
-void creer_map(char matrice[N][M])
+void creer_map(char matrice[][], const int N, const int M)
 {
 
 	int i, j;
@@ -51,8 +50,6 @@ void creer_map(char matrice[N][M])
 	i=0;
 	j=M-1;
 	matrice[i][j]='+';
-
-	matrice=tresor(matrice, N-1, M-1);
 
 	for(i=0; i<N; i++){
 		for(j=0; j<M; j++){
