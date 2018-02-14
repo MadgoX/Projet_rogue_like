@@ -3,6 +3,7 @@
 #include <time.h>
 #include "rogue_like.h"
 
+//Trouve la coordonnee en x du tresor
 int tresorx(int longueur) {
 	srand(time(NULL));
 	int i=0;
@@ -11,6 +12,7 @@ int tresorx(int longueur) {
 	return i;
 }
 
+//Trouve la coordonnee en y du tresor
 int tresory(int largeur) {
 	srand(time(NULL));
 	int i=0;
@@ -19,6 +21,7 @@ int tresory(int largeur) {
 	return i;
 }
 
+//Permet d'eviter de placer le tresor dans un endroit autre qu'une piece (mur, emplacement vide...)
 void placement_tresors(char matrice[N][M]) {
 	int tresx=tresorx(N);
 	int tresy=tresory(M);
