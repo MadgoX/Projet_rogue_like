@@ -44,7 +44,7 @@ int main()
 {
 	srand(time(NULL)); // initialisation de rand
 	int test = choisir_porte_x(1,3,48,50);
-	printf("Porte x : %i\n",test);
+	printf("Porte x : %i\n",test); 
 	int test2 = choisir_porte_y(1,3,48,50);
 	printf("Porte y : %i\n",test2);
 }
