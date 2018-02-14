@@ -3,7 +3,7 @@
 LVL1 = map_niveau1
 LVL2 = map_niveau2
 MAP = create_map
-TRES = tresor
+TRES = tresors
 COUL=placement_coul
 CC = gcc
 
