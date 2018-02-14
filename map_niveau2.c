@@ -1,8 +1,7 @@
 #include<stdio.h>
-#define N 30
-#define M 100
+#include "rogue_like.h"
 
-void creer_map(char matrice[N][M])
+/*void creer_map(char matrice[N][M])
 {
 
 	int i, j;
@@ -49,12 +48,12 @@ void creer_map(char matrice[N][M])
 	i=0;
 	j=M-1;
 	matrice[i][j]='+';
-}
+}*/
 
-void creer_piece1(char matrice[N][M]){
+void creer_piece21(char matrice[N][M]){
 
 	//Appel de la fonction qui créer le tour de la map
-	creer_map(matrice);
+	//creer_map(matrice);
 
 	int i, j;
 	
@@ -93,19 +92,5 @@ void creer_piece1(char matrice[N][M]){
 	for(j = 7; j < 25; j++){
 		i = 15;
 		matrice[i][j] = '-';
-	}
-}
-
-int main(){
-	int i, j;
-	char map[N][M];
-	creer_piece1(map);
-
-	//Affichage de la map
-	for(i = 0; i < N; i++){
-		for(j = 0; j < M; j++){
-			printf("%c",map[i][j]);
-		}
-		printf("\n");
 	}
 }
