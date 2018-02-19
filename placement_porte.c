@@ -2,6 +2,7 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<time.h>
+#include"rogue_like.h"
 
 #define N 30
 #define M 50
@@ -10,6 +11,9 @@ int rand_a_b(int a, int b)
 {
 	return rand()%(b-a) +a;
 }
+
+
+int 0
 
 
 int choisir_porte_x(int x_hg, int x_hd, int x_bg, int x_bd)
@@ -50,11 +54,10 @@ int choisir_porte_y(int y_hg, int y_bg, int y_hd, int y_bd)
 
 
 
-int main()
+void placement_porte(char map[N][M])
 {
 	int i, j;
 	int compt = 0;
-	char map[N][M];
 	int x_hg; int x_hd; int x_bg; int x_bd; int y_hg; int y_bg; int y_hd; int y_bd;
 printf("OK\n");
 	creer_piece1(map);
@@ -92,7 +95,7 @@ printf("OK debut for\n");
 			}
 		}
 	}
-	int test=rand(); //variable permettant de choisir si on utilise le bord haut ou le brod bas
+	
 	srand(time(NULL)); // initialisation de rand
 	int test2, test3;	
 	if (test%2 == 0)
@@ -133,5 +136,4 @@ printf("OK\n");
 		}
 		printf("\n");
 	}
-	return 0;
 }
