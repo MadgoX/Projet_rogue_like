@@ -1,5 +1,6 @@
 LVL1 = map_niveau1
 LVL2 = map_niveau2
+LVL3 = map_niveau3
 MAP = create_map
 TRES = tresors
 COUL=placement_coul
@@ -24,12 +25,14 @@ ${LVL1}.o: ${LVL1}.c
 ${LVL2}.o: ${LVL2}.c
 	${CC} -c ${LVL2}.c
 
-
 map1: ${LVL1}.o ${MAP}.o
 	${CC} ${LVL1}.o ${MAP}.o -o map1
 
 map2: ${LVL2}.o ${MAP}.o
 	${CC} ${LVL2}.o ${MAP}.o -o map2
+
+map3:  ${LVL3}.o ${MAP}.o
+	${CC} ${LVL3}.o ${MAP}.o -o map1
 
 couloir: ${COUL}.c
 	${CC} ${COUL}.c -o couloir
@@ -43,4 +46,4 @@ clean:
 	- rm map_niveau1
 	- rm map_niveau2
 
-all : rogue_like map1 map2 tresors
+all : rogue_like map1 map2 map3 tresors
