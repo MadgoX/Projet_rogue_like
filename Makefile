@@ -32,7 +32,7 @@ map2: ${LVL2}.o ${MAP}.o
 	${CC} ${LVL2}.o ${MAP}.o -o map2
 
 map3:  ${LVL3}.o ${MAP}.o
-	${CC} ${LVL3}.o ${MAP}.o -o map1
+	${CC} ${LVL3}.o ${MAP}.o -o map3
 
 couloir: ${COUL}.c
 	${CC} ${COUL}.c -o couloir
@@ -43,7 +43,8 @@ tresors: ${TRES}.o ${MAP}.o
 clean:
 	- rm *.o
 	- rm rogue_like
-	- rm map_niveau1
-	- rm map_niveau2
+	- rm map1
+	- rm map2
+	- rm map3
 
 all : rogue_like map1 map2 map3 tresors
