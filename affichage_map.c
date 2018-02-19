@@ -25,12 +25,12 @@ void affichage_map2(char matrice[A][B]){
 	}
 }
 
-void affichage_map3(char matrice[C][C]){
+void affichage_map3(char matrice[C][D]){
 	int i, j;
 	
 	//Affichage de la map
 	for(i = 0; i < C; i++){
-		for(j = 0; j < C; j++){
+		for(j = 0; j < D; j++){
 			printf("%c",matrice[i][j]);
 		}
 		printf("\n");

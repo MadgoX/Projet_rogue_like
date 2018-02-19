@@ -4,7 +4,7 @@
 /**
 *	Création d'une première pièce en haut à gauche de la map
 */
-void creer_piece21(char matrice[N][M]){
+void creer_piece21(char matrice[A][B]){
 
 	int i, j;
 	int x_haut = 5;
@@ -53,7 +53,7 @@ void creer_piece21(char matrice[N][M]){
 /**
 *	Création d'une pièce, en haut à droite de la map
 */
-void creer_piece22(char matrice[N][M]){
+void creer_piece22(char matrice[A][B]){
 
 	int i, j;
 	int x_haut = 10;
@@ -102,7 +102,7 @@ void creer_piece22(char matrice[N][M]){
 /**
 *	Création d'une pièce, sur la gauche de la map
 */
-void creer_piece23(char matrice[N][M]){
+void creer_piece23(char matrice[A][B]){
 
 	int i, j;
 	int x_haut = 22;
@@ -151,7 +151,7 @@ void creer_piece23(char matrice[N][M]){
 /**
 *	Création d'une pièce, en bas de la map
 */
-void creer_piece24(char matrice[N][M]){
+void creer_piece24(char matrice[A][B]){
 
 	int i, j;
 	int x_haut = 37;
