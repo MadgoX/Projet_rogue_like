@@ -80,7 +80,7 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 		for(j = y_gauche; j < y_droite; j++){
 			matrice[i][j] = ' ';
 		}
-	}
+	} 
 
 	/*Mur de gauche de la pièce*/
 	for(i = x_haut; i < x_bas; i++){
