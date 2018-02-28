@@ -5,6 +5,7 @@
 #define N 30
 #define M 50
 
+/*Création des pièces d'une taille aléatoire*/
 void creer_map(char matrice[N][M])
 {
 
