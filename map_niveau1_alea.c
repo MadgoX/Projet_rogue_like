@@ -9,7 +9,7 @@
 *	Créer 3 types de pièces :
 *		- de petite taille
 *		- de moyenne taille
-*		- de grande taille
+*		- de grande taille 
 */
 
 void creer_map(char matrice[N][M])
