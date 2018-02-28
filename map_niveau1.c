@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include"rogue_like.h"
 
-/*#define N 30
+#define N 30
 #define M 50
 
 void creer_map(char matrice[N][M])
@@ -38,7 +39,7 @@ void creer_map(char matrice[N][M])
 	}
 	
 	i=0;
-	j=0
+	j=0;
 	matrice[i][j]='+';
 
 	i=N-1;
@@ -53,9 +54,8 @@ void creer_map(char matrice[N][M])
 	j=M-1;
 	matrice[i][j]='+';
 
-}*/
+}
 
-/*Génère un nombre aléatoire entre a et b*/
 int rand_a_b(int a, int b){
 
     return rand()%(b-a) +a;
@@ -113,20 +113,27 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 	}
 }
 
-/*int main(){
+/* Création de la map du niveau 1 */
+void map_niveau1(char map[N][M]){
+
+	/* Création de la première pièce */
+	creer_piece(map, rand_a_b(2, 7), rand_a_b(2, 12), 5, 12, 4, 7);
+	
+	/* Création de la deuxième pièce */
+	creer_piece(map, rand_a_b(2, 7), rand_a_b(27, 37), 5, 12, 4, 7);
+	
+	/* Création de la troisième pièce */
+	creer_piece(map, rand_a_b(17, 21), rand_a_b(7, 22), 19, 25, 4, 7);
+}
+
+int main(){
 	int i, j;
 	char map[N][M];
-	int tab[20];
-
-	for(i = 0; i < 20; i++){
-		tab[i] = 0;
-	}
 
 	//Appel de la fonction qui créé le tour de la map
 	creer_map(map);
 
-	creer_piece(map, 3, 4, 7, 10);
-	creer_piece(map, 15, 16, 10, 12);
+	map_niveau1(map);
 
 	//Affichage de la map
 	for(i = 0; i < N; i++){
@@ -135,4 +142,4 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 		}
 		printf("\n");
 	}
-}*/
+}
