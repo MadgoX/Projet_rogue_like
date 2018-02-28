@@ -2,10 +2,9 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define N 30
+/*#define N 30
 #define M 50
 
-/*Création des pièces d'une taille aléatoire*/
 void creer_map(char matrice[N][M])
 {
 
@@ -54,7 +53,7 @@ void creer_map(char matrice[N][M])
 	j=M-1;
 	matrice[i][j]='+';
 
-}
+}*/
 
 /*Génère un nombre aléatoire entre a et b*/
 int rand_a_b(int a, int b){
@@ -64,7 +63,7 @@ int rand_a_b(int a, int b){
 }
 
 /* Fonction de création d'une petite pièce */
-void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min, int max){
+void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, min_haut, max_haut){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
 	int i, j;
@@ -114,7 +113,7 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min, int max)
 	}
 }
 
-int main(){
+/*int main(){
 	int i, j;
 	char map[N][M];
 	int tab[20];
@@ -136,4 +135,4 @@ int main(){
 		}
 		printf("\n");
 	}
-}
+}*/
