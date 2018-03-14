@@ -69,7 +69,7 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 	int i, j;
 	int x_bas, y_droite;
 
-	// initialisation de rand
+	// initialisation de rand 
 	srand(time(NULL));
 
 	x_bas = x_haut + rand_a_b(min_haut, max_haut);
