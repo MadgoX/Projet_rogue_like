@@ -1,10 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#include"rogue_like.h"
 
-#define N 30
-#define M 50
+#define N 50
+#define M 60
 
 void creer_map(char matrice[N][M])
 {
@@ -114,16 +113,19 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 }
 
 /* Création de la map du niveau 1 */
-void map_niveau1(char map[N][M]){
+void map_niveau2(char map[N][M]){
 
 	/* Création de la première pièce */
-	creer_piece(map, rand_a_b(2, 7), rand_a_b(2, 12), 5, 12, 4, 7);
+	creer_piece(map, rand_a_b(3, 8), rand_a_b(3, 8), 5, 15, 7, 11);
 	
 	/* Création de la deuxième pièce */
-	creer_piece(map, rand_a_b(2, 7), rand_a_b(27, 37), 5, 12, 4, 7);
+	creer_piece(map, rand_a_b(5, 10), rand_a_b(32, 45), 7, 15, 4, 9);
 	
 	/* Création de la troisième pièce */
-	creer_piece(map, rand_a_b(17, 21), rand_a_b(7, 22), 19, 25, 4, 7);
+	creer_piece(map, rand_a_b(27, 32), rand_a_b(3, 8), 8, 13, 9, 15);
+	
+	/* Création de la quatrième pièce */
+	creer_piece(map, rand_a_b(27, 37), rand_a_b(32, 45), 8, 13, 9, 13);
 }
 
 int main(){
@@ -133,7 +135,7 @@ int main(){
 	//Appel de la fonction qui créé le tour de la map
 	creer_map(map);
 
-	map_niveau1(map);
+	map_niveau2(map);
 
 	//Affichage de la map
 	for(i = 0; i < N; i++){
