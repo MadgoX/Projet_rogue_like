@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#include"rogue_like.h"
 
 #define N 50
 #define M 60

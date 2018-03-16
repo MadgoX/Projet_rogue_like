@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-#include"rogue_like.h"
 
 #define N 30
 #define M 50
@@ -113,12 +112,29 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 	}
 }
 
+/* Placement des portes */
+void placement_porte(char map[N][M], int nb_portes){
+
+	char c_cour = map[0][0];
+	int i = 0, j = 0:
+
+	/* Parcours de la map jusqu'à ce qu'on tombe sur une pièce */
+	while(c_cour != '+'){
+		i++;
+		j++;
+		c_cour = map[i][j];
+	}
+
+	/* A terminer */
+}
+
 /* Création de la map du niveau 1 */
 void map_niveau1(char map[N][M]){
 
 	/* Création de la première pièce */
 	creer_piece(map, rand_a_b(2, 7), rand_a_b(2, 12), 5, 12, 4, 7);
-	
+	placement_porte(...);
+
 	/* Création de la deuxième pièce */
 	creer_piece(map, rand_a_b(2, 7), rand_a_b(27, 37), 5, 12, 4, 7);
 	
