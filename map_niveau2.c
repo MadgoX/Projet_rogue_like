@@ -36,7 +36,7 @@ void creer_map(char matrice[N][M])
 	for(j=1; j<M-1; j++){
 		matrice[i][j]='=';
 	}
-	
+	 
 	i=0;
 	j=0;
 	matrice[i][j]='+';
