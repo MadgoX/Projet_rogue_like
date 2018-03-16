@@ -35,7 +35,7 @@ void creer_piece1(char matrice[N][M]){
 	matrice[x_haut-1][y_gauche-1] = '+';
 	matrice[x_haut-1][y_droite] = '+';
 	matrice[x_bas][y_gauche-1] = '+';
-	matrice[x_bas][y_droite] = '+';
+	matrice[x_bas][y_droite] = '+'; 
 
 	/*Mur du haut de la pièce*/
 	for(j = y_gauche; j < y_droite; j++){
