@@ -33,7 +33,7 @@ void creer_piece31(char matrice[C][D]){
 
 	//Angles des pièces
 	matrice[x_haut-1][y_gauche-1] = '+';
-	matrice[x_haut-1][y_droite] = '+';
+	matrice[x_haut-1][y_droite] = '+'; 
 	matrice[x_bas][y_gauche-1] = '+';
 	matrice[x_bas][y_droite] = '+';
 
