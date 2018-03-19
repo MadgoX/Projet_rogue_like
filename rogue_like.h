@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include <SDL2/SDL.h>
+
 #define N 30
 #define M 50
 #define O 50
@@ -23,6 +25,10 @@ int rand_a_b(int a, int b);
 void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut);
 void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut);
 void creer_piece3(char matrice[M][Q], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut);
+
+void map_niveau1(char map[N][M]);
+void map_niveau2(char map[O][P]);
+void map_niveau3(char map[M][Q]);
 
 /*
 void creer_piece1(char matrice[N][M]);
