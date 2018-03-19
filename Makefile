@@ -10,10 +10,9 @@ FLAGS=-Wall -g
 SDL_DIR=${HOME}/Projet_rogue_like/SDL2
 SDL_LIB_DIR=${SDL_DIR}/lib
 SDL_INC_DIR=${SDL_DIR}/include
-LIBS=-L${SDL_LIB_DIR} -lSDL2
+LIBS=-L${SDL_LIB_DIR} -lSDL2 -lSDL2_ttf
 INCS=-I${SDL_INC_DIR}
 PROG=rogue_like
-
 
 ${PROG} : main.o ${MAP}.o ${TRES}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o
 	${CC} main.o ${MAP}.o ${TRES}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o -o ${PROG} ${LIBS} ${INCS} ${FLAGS}
