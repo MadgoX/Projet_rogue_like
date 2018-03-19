@@ -6,52 +6,43 @@ TRES = tresors
 COUL = placement_coul
 AFF = affichage_map
 CC = gcc
+FLAGS=-Wall -g
+SDL_DIR=${HOME}/Projet_rogue_like/SDL2
+SDL_LIB_DIR=${SDL_DIR}/lib
+SDL_INC_DIR=${SDL_DIR}/include
+LIBS=-L${SDL_LIB_DIR} -lSDL2
+INCS=-I${SDL_INC_DIR}
+PROG=rogue_like
 
 
-rogue_like : main.o ${MAP}.o ${TRES}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o
-	${CC} main.o ${MAP}.o ${TRES}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o -o rogue_like
+${PROG} : main.o ${MAP}.o ${TRES}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o
+	${CC} main.o ${MAP}.o ${TRES}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o -o ${PROG} ${LIBS} ${INCS} ${FLAGS}
 
 main.o : main.c
-	${CC} -c main.c
+	${CC} -c main.c ${LIBS} ${INCS} ${FLAGS}
 
 ${MAP}.o : ${MAP}.c
-	${CC} -c ${MAP}.c
+	${CC} -c ${MAP}.c ${LIBS} ${INCS} ${FLAGS}
 
 ${AFF}.o : ${AFF}.c
-	${CC} -c ${AFF}.c
+	${CC} -c ${AFF}.c ${LIBS} ${INCS} ${FLAGS}
 
 ${TRES}.o : ${TRES}.c
-	${CC} -c ${TRES}.c
+	${CC} -c ${TRES}.c ${LIBS} ${INCS} ${FLAGS}
 
 ${LVL1}.o: ${LVL1}.c
-	${CC} -c ${LVL1}.c
+	${CC} -c ${LVL1}.c ${LIBS} ${INCS} ${FLAGS}
 
 ${LVL2}.o: ${LVL2}.c
-	${CC} -c ${LVL2}.c
+	${CC} -c ${LVL2}.c ${LIBS} ${INCS} ${FLAGS}
 
 ${LVL3}.o: ${LVL3}.c
-	${CC} -c ${LVL3}.c
+	${CC} -c ${LVL3}.c ${LIBS} ${INCS} ${FLAGS}
 
-map1: ${LVL1}.o ${MAP}.o ${AFF}.o
-	${CC} ${LVL1}.o ${MAP}.o ${AFF}.o -o map1
-
-map2: ${LVL2}.o ${MAP}.o ${AFF}.o
-	${CC} ${LVL2}.o ${MAP}.o ${AFF}.o -o map2
-
-map3:  ${LVL3}.o ${MAP}.o ${AFF}.o
-	${CC} ${LVL3}.o ${MAP}.o ${AFF}.o -o map3
-
-couloir: ${COUL}.c
-	${CC} ${COUL}.c -o couloir
-
-tresors: ${TRES}.o ${MAP}.o
-	${CC} ${TRES}.o ${MAP}.o -o tresors
 
 clean:
 	- rm *.o
 	- rm rogue_like
-	- rm map1
-	- rm map2
-	- rm map3
 
-all : rogue_like map1 map2 map3 tresors
+all : rogue_like ${LIBS} ${INCS} ${FLAGS}
+
