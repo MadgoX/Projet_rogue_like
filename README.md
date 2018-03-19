@@ -6,7 +6,7 @@ Programmeurs :
   PAULMERY Yann
  
 Ce jeu a été programmé dans le cadre d'un projet étudiant en L2 Informatique.
-L'objectif est de pogrammer un jeu Roguelike.
+L'objectif est de programmer un jeu Roguelike.
 
 Pour compiler le jeu :
 Ouvrir un terminal dans le répertoire du jeu et compiler à l'aide de la commande make
