@@ -5,6 +5,9 @@
 #define N 30
 #define M 50
 
+//Pieces 1, 2 et 3 du niveau 1
+piece_t piece11, piece12, piece13;
+
 void creer_map(char matrice[N][M])
 {
 
@@ -61,12 +64,13 @@ int rand_a_b(int a, int b){
 
 }
 
-/* Fonction de création d'une pièce */
-void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut){
+/* Fonction de création des pièces avec les portes */
+void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
 	int i, j;
 	int x_bas, y_droite;
+	int x_porte, y_porte;
 
 	// initialisation de rand
 	srand(time(NULL));
@@ -110,36 +114,77 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 		i = x_bas;
 		matrice[i][j] = '-';
 	}
-}
 
-/* Placement des portes */
-void placement_porte(char map[N][M], int nb_portes){
+	//Placement de la porte de la piece 1
+	if(num_piece == 1){
+		x_porte = rand_a_b(x_haut + 1, x_bas - 1);
+		matrice[x_porte][y_droite] = 'P';
 
-	char c_cour = map[0][0];
-	int i = 0, j = 0:
+		//remplissage de la structure piece11
+		piece11.x_haut = x_haut;
+		piece11.y_gauche = y_gauche;
 
-	/* Parcours de la map jusqu'à ce qu'on tombe sur une pièce */
-	while(c_cour != '+'){
-		i++;
-		j++;
-		c_cour = map[i][j];
+		piece11.x_porte1 = piece11.y_porte1 = piece11.position_p1 = NULL;
+
+		piece11.x_porte2 = x_porte;
+		piece11.y_porte2 = y_droite;
+		piece11.position_p2 = 'v';
 	}
 
-	/* A terminer */
+	//Placement de la porte pour la pièce 2
+	if(num_piece == 2){
+		//Première porte
+		x_porte = rand_a_b(x_haut + 1, x_bas - 1);
+		matrice[x_porte][y_gauche] = 'P';
+		//Seconde porte
+		y_porte = rand_a_b(y_gauche + 1, y_droite - 1);
+		matrice[x_bas][y_porte] = 'P';
+
+		//remplissage de la structure piece12
+		piece12.x_haut = x_haut;
+		piece12.y_gauche = y_gauche;
+
+		piece12.x_porte1 = x_porte;
+		piece12.y_porte1 = y_gauche;
+		piece12.position_p1 = 'v';
+
+		piece12.x_porte2 = x_bas;
+		piece12.y_porte2 = y_porte;
+		piece12.position_p2 = 'h';
+	}
+
+	//Placement de la porte pour la pièce 3
+	if(num_piece == 3){
+		y_porte = rand_a_b(y_gauche + 1, y_droite - 1);
+		matrice[x_haut-1][y_porte] = 'P';
+
+		//remplissage de la structure piece13
+		piece13.x_haut = x_haut;
+		piece13.y_gauche = y_gauche;
+
+		piece13.x_porte1 = x_haut - 1;
+		piece13.y_porte1 = y_porte;
+		piece13.position_p1 = 'h';
+
+		piece13.x_porte2 = piece13.y_porte2 = piece13.position_p2 = NULL;
+	}
 }
 
 /* Création de la map du niveau 1 */
 void map_niveau1(char map[N][M]){
 
+	int x_haut_p1 = rand_a_b(2, 7), y_gauche_p1 = rand_a_b(2, 12);
+	int x_haut_p2 = rand_a_b(2, 7), y_gauche_p2 = rand_a_b(27, 37);
+	int x_haut_p3 = rand_a_b(17, 21), y_gauche_p3 = rand_a_b(7, 22);
+
 	/* Création de la première pièce */
-	creer_piece(map, rand_a_b(2, 7), rand_a_b(2, 12), 5, 12, 4, 7);
-	placement_porte(...);
+	creer_piece(map, x_haut_p1, y_gauche_p1, 5, 12, 4, 7, 1);
 
 	/* Création de la deuxième pièce */
-	creer_piece(map, rand_a_b(2, 7), rand_a_b(27, 37), 5, 12, 4, 7);
+	creer_piece(map, x_haut_p2, y_gauche_p2, 5, 12, 4, 7, 2);
 	
 	/* Création de la troisième pièce */
-	creer_piece(map, rand_a_b(17, 21), rand_a_b(7, 22), 19, 25, 4, 7);
+	creer_piece(map, x_haut_p3, y_gauche_p3, 19, 25, 4, 7, 3);
 }
 
 int main(){
