@@ -1,8 +1,8 @@
 # Projet_rogue_like
 
 Programmeurs :
-  BOUYEURE Lucien
-  BUON Romane
+  BOUYEURE Lucien,
+  BUON Romane,
   PAULMERY Yann
  
 Ce jeu a été programmé dans le cadre d'un projet étudiant en L2 Informatique.
