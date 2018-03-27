@@ -1,68 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
-
-#define N 30
-#define M 50
+#include "rogue_like.h"
 
 //Pieces 1, 2 et 3 du niveau 1
 piece_t piece11, piece12, piece13;
-
-void creer_map(char matrice[N][M])
-{
-
-	int i, j;
-	char res;
-	
-	for(i=0; i<N; i++){
-		for(j=0; j<M; j++){
-			matrice[i][j]='.';
-		}
-	}
-
-	i=0;
-	for(j=1; j<M-1; j++){
-		matrice[i][j]='=';
-	}
-	
-	j=0;
-	for(i=1; i<N-1; i++){
-		matrice[i][j]='#';
-	}
-
-	j=M-1;
-	for(i=1; i<N-1; i++){
-		matrice[i][j]='#';
-	}
-
-	i=N-1;
-	for(j=1; j<M-1; j++){ 
-		matrice[i][j]='='; 
-	}
-	
-	i=0;
-	j=0;
-	matrice[i][j]='+';
-
-	i=N-1;
-	j=M-1;
-	matrice[i][j]='+';
-	
-	i=N-1;
-	j=0;
-	matrice[i][j]='+';
-
-	i=0;
-	j=M-1;
-	matrice[i][j]='+';
-
-}
-
-int rand_a_b(int a, int b){
-
-    return rand()%(b-a) +a;
-
-}
 
 /* Fonction de création des pièces avec les portes */
 void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
@@ -124,7 +66,7 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 		piece11.x_haut = x_haut;
 		piece11.y_gauche = y_gauche;
 
-		piece11.x_porte1 = piece11.y_porte1 = piece11.position_p1 = NULL;
+		piece11.x_porte1 = piece11.y_porte1 = piece11.position_p1 = 0;
 
 		piece11.x_porte2 = x_porte;
 		piece11.y_porte2 = y_droite;
@@ -166,7 +108,7 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 		piece13.y_porte1 = y_porte;
 		piece13.position_p1 = 'h';
 
-		piece13.x_porte2 = piece13.y_porte2 = piece13.position_p2 = NULL;
+		piece13.x_porte2 = piece13.y_porte2 = piece13.position_p2 = 0;
 	}
 }
 
@@ -187,7 +129,7 @@ void map_niveau1(char map[N][M]){
 	creer_piece(map, x_haut_p3, y_gauche_p3, 19, 25, 4, 7, 3);
 }
 
-int main(){
+/*int main(){
 	int i, j;
 	char map[N][M];
 
@@ -203,4 +145,4 @@ int main(){
 		}
 		printf("\n");
 	}
-}
+}*/
