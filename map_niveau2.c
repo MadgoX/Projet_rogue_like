@@ -1,3 +1,11 @@
+/*!
+*
+*	\file map_niveau2.c
+*	\brief Création de la map du niveau 2
+*	\author Romane BUON, Lucien BOUYEURE, Yann PAULMERY
+*	\version 0.1
+*
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -7,7 +15,20 @@
 //Pieces 1, 2, 3 et 4 du niveau 2
 piece_t piece21, piece22, piece23, piece24;
 
-/* Fonction de création d'une pièce */
+/*!
+*	
+*	\fn void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece)
+*	\brief Fonction de création des pièces du niveau 2, avec les portes.
+*		\param matrice Matrice contenant la map du niveau 2.
+*		\param x_haut Ordonnée de l'angle haut-gauche de la pièce.
+*		\param y_gauche Abscisse de l'angle haut-gauche de la piece.
+*		\param min_larg Valeur minimale de la largeur de la piece.
+*		\param max_larg Valeur maximale de la largeu de la pièce.
+*		\param min_haut Valeur minimale de la hauteur de la pièce.
+*		\param max_haut Valeur maximale de la hauteur de la piece.
+*		\param num_piece Numéro de la zone dans laquelle se trouve la pièce à créer (1, 2, 3 ou 4 car il y a 4 pièces dans le niveau 2).
+*
+*/
 void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
@@ -135,7 +156,13 @@ void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, in
 	}
 }
 
-/* Création de la map du niveau 1 */
+/*!
+*	
+*	\fn void map_niveau2(char map[O][P])
+*	\brief Fonction de création de la map du niveau 2.
+*	\param matrice Matrice contenant la map du niveau 2.
+*
+*/
 void map_niveau2(char map[O][P]){
 
 	int x_haut_p1 = rand_a_b(3, 8), y_gauche_p1 = rand_a_b(3, 8);

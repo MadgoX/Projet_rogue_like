@@ -25,7 +25,7 @@ piece_t piece11, piece12, piece13;
 *		\param max_larg Valeur maximale de la largeu de la pièce.
 *		\param min_haut Valeur minimale de la hauteur de la pièce.
 *		\param max_haut Valeur maximale de la hauteur de la piece.
-*		\param num_piece Numéro de la pièce (1, 3 ou 3 car il y a 3 pièces dans le niveau 1).
+*		\param num_piece Numéro de la zone dans laquelle se trouve la pièce à créer (1, 2 ou 3 car il y a 3 pièces dans le niveau 1).
 *
 */
 void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
@@ -140,7 +140,6 @@ void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int
 *	\param matrice Matrice contenant la map du niveau 1.
 *
 */
-/* Création de la map du niveau 1 */
 void map_niveau1(char map[N][M]){
 
 	int x_haut_p1 = rand_a_b(2, 7), y_gauche_p1 = rand_a_b(2, 12);
