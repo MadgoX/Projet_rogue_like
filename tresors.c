@@ -21,7 +21,10 @@ int tresory(int largeur) {
 	return i;
 }
 
-//Permet d'eviter de placer le tresor dans un endroit autre qu'une piece (mur, emplacement vide...)
+/*Ces fonctions cherchent aleatoirement un endroit pour y placer le tresor, c'est a dire une case
+vide sans obstacle, representant l'interieur d'une piece*/
+
+//Pour le premier etage
 void placement_tresors1(char matrice[N][M]) {
 	int tresx=tresorx(N);
 	int tresy=tresory(M);
@@ -36,30 +39,34 @@ void placement_tresors1(char matrice[N][M]) {
 	}
 }
 
-void placement_tresors2(char matrice[A][B]) {
-	int tresx=tresorx(A);
-	int tresy=tresory(B);
+//Pour le deuxieme etage
+void placement_tresors2(char matrice[O][P]) {
+	int tresx=tresorx(O);
+	int tresy=tresory(P);
 	if(matrice[tresx][tresy]==' ')
 		matrice[tresx][tresy]='o';
 	else {
 		while(matrice[tresx][tresy]!=' ') {
-			tresx=tresorx(A);
-			tresy=tresory(B);
+			tresx=tresorx(O);
+			tresy=tresory(P);
 		}
 		matrice[tresx][tresy]='o';
 	}
 }
 
-void placement_tresors3(char matrice[C][D]) {
-	int tresx=tresorx(C);
-	int tresy=tresory(D);
+//Pour le troisieme etage
+void placement_tresors3(char matrice[M][Q]) {
+	int tresx=tresorx(M);
+	int tresy=tresory(Q);
 	if(matrice[tresx][tresy]==' ')
 		matrice[tresx][tresy]='o';
 	else {
 		while(matrice[tresx][tresy]!=' ') {
-			tresx=tresorx(C);
-			tresy=tresory(D);
+			tresx=tresorx(M);
+			tresy=tresory(Q);
 		}
 		matrice[tresx][tresy]='o';
 	}
 }
+
+//La seule difference entre ces trois fonctions est, comme partout, la taille de la matrice.
