@@ -6,6 +6,7 @@
 *	\version 0.1
 *
 */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
@@ -18,11 +19,11 @@
 *	\param matrice Matrice contenant la map du niveau 1.
 *
 */
-void creer_map1(char matrice[N][M])
+
+void creer_map(char matrice[N][M])
 {
 
 	int i, j;
-	char res;
 	
 	for(i=0; i<N; i++){
 		for(j=0; j<M; j++){
@@ -75,35 +76,35 @@ void creer_map1(char matrice[N][M])
 *	\param matrice Matrice contenant la map du niveau 2.
 *
 */
+
 void creer_map2(char matrice[O][P])
 {
 
 	int i, j;
-	char res;
 	
-	for(i=0; i<A; i++){
-		for(j=0; j<B; j++){
+	for(i=0; i<O; i++){
+		for(j=0; j<P; j++){
 			matrice[i][j]='.';
 		}
 	}
 
 	i=0;
-	for(j=1; j<B-1; j++){
+	for(j=1; j<P-1; j++){
 		matrice[i][j]='=';
 	}
 	
 	j=0;
-	for(i=1; i<A-1; i++){
+	for(i=1; i<O-1; i++){
 		matrice[i][j]='#';
 	}
 
-	j=B-1;
-	for(i=1; i<A-1; i++){
+	j=P-1;
+	for(i=1; i<O-1; i++){
 		matrice[i][j]='#';
 	}
 
-	i=A-1;
-	for(j=1; j<B-1; j++){
+	i=O-1;
+	for(j=1; j<P-1; j++){
 		matrice[i][j]='=';
 	}
 	
@@ -111,16 +112,16 @@ void creer_map2(char matrice[O][P])
 	j=0;
 	matrice[i][j]='+';
 
-	i=A-1;
-	j=B-1;
+	i=O-1;
+	j=P-1;
 	matrice[i][j]='+';
 	
-	i=A-1;
+	i=O-1;
 	j=0;
 	matrice[i][j]='+';
 
 	i=0;
-	j=B-1;
+	j=P-1;
 	matrice[i][j]='+';
 
 }
@@ -132,35 +133,35 @@ void creer_map2(char matrice[O][P])
 *	\param matrice Matrice contenant la map du niveau 3.
 *
 */
+
 void creer_map3(char matrice[M][Q])
 {
 
 	int i, j;
-	char res;
 	
-	for(i=0; i<C; i++){
-		for(j=0; j<D; j++){
+	for(i=0; i<M; i++){
+		for(j=0; j<Q; j++){
 			matrice[i][j]='.';
 		}
 	}
 
 	i=0;
-	for(j=1; j<D-1; j++){
+	for(j=1; j<Q-1; j++){
 		matrice[i][j]='=';
 	}
 	
 	j=0;
-	for(i=1; i<C-1; i++){
+	for(i=1; i<M-1; i++){
 		matrice[i][j]='#';
 	}
 
-	j=D-1;
-	for(i=1; i<C-1; i++){
+	j=Q-1;
+	for(i=1; i<M-1; i++){
 		matrice[i][j]='#';
 	}
 
-	i=C-1;
-	for(j=1; j<D-1; j++){
+	i=M-1;
+	for(j=1; j<Q-1; j++){
 		matrice[i][j]='=';
 	}
 	
@@ -168,16 +169,16 @@ void creer_map3(char matrice[M][Q])
 	j=0;
 	matrice[i][j]='+';
 
-	i=C-1;
-	j=D-1;
+	i=M-1;
+	j=Q-1;
 	matrice[i][j]='+';
 	
-	i=C-1;
+	i=M-1;
 	j=0;
 	matrice[i][j]='+';
 
 	i=0;
-	j=D-1;
+	j=Q-1;
 	matrice[i][j]='+';
 
 }
