@@ -1,9 +1,23 @@
+/*!
+*
+*	\file create_map.c
+*	\brief Creation des maps
+*	\author Romane BUON, Lucien BOUYEURE, Yann PAULMERY
+*	\version 0.1
+*
+*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>
 #include"rogue_like.h"
 
-
+/*!
+*
+*	\fn void creer_map1(char matrice[N][M])
+*	\brief Création de la base de la map du niveau 1.
+*	\param matrice Matrice contenant la map du niveau 1.
+*
+*/
 void creer_map1(char matrice[N][M])
 {
 
@@ -54,7 +68,14 @@ void creer_map1(char matrice[N][M])
 
 }
 
-void creer_map2(char matrice[A][B])
+/*!
+*
+*	\fn void creer_map2(char matrice[O][P])
+*	\brief Création de la base de la map du niveau 2.
+*	\param matrice Matrice contenant la map du niveau 2.
+*
+*/
+void creer_map2(char matrice[O][P])
 {
 
 	int i, j;
@@ -104,7 +125,14 @@ void creer_map2(char matrice[A][B])
 
 }
 
-void creer_map3(char matrice[C][D])
+/*!
+*
+*	\fn void creer_map3(char matrice[M][Q])
+*	\brief Création de la base de la map du niveau 3.
+*	\param matrice Matrice contenant la map du niveau 3.
+*
+*/
+void creer_map3(char matrice[M][Q])
 {
 
 	int i, j;

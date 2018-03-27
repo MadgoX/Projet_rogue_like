@@ -1,6 +1,21 @@
+/*!
+*
+*	\file affichage_map.c
+*	\brief Affichage des maps
+*	\author Romane BUON, Lucien BOUYEURE, Yann PAULMERY
+*	\version 0.1
+*
+*/
 #include<stdio.h>
 #include"rogue_like.h"
 
+/*!
+*	
+*	\fn void affichage_map1(char matrice[N][M])
+*	\brief Afichage de la map du niveau 1.
+*	\param matrice Matice contenant la map du niveau 1.
+*
+*/
 void affichage_map1(char matrice[N][M]){
 	int i, j;
 	
@@ -13,7 +28,14 @@ void affichage_map1(char matrice[N][M]){
 	}
 }
 
-void affichage_map2(char matrice[A][B]){
+/*!
+*
+*	\fn void affichage_map2(char matrice[O][P])
+*	\brief Affichage de la matice du niveau 2.
+*	\param matrice Matrice contenant la map du niveau 2.
+*
+*/
+void affichage_map2(char matrice[O][P]){
 	int i, j;
 	
 	//Affichage de la map
@@ -25,7 +47,14 @@ void affichage_map2(char matrice[A][B]){
 	}
 }
 
-void affichage_map3(char matrice[C][D]){
+/*!
+*
+*	\fn void affichage_map3(char matrice[M][Q])
+*	\brief Affichage de la matice du niveau 3.
+*	\param matrice Matrice contenant la map du niveau 3.
+*
+*/
+void affichage_map3(char matrice[M][Q]){
 	int i, j;
 	
 	//Affichage de la map
