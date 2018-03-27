@@ -1,15 +1,37 @@
+/*!
+*
+*	\file main.c
+*	\brief Fonction main du projet
+*	\author Lucien BOUYEURE, Romane BUON, Yann PAULMERY
+*	\version 0.1
+*
+*/
 #include <stdlib.h>
 #include <stdio.h>
 #include "rogue_like.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 
+/*!
+*	
+*	\fn rand_a_b(int a, int b)
+*	\brief Fonction de génération d'un nombre aléatoire.
+*	\param a Borne inférieure de l'intevalle dans lequel le nombre aléatoire doit être généré.
+*	\param b Borne supérieure de l'intevalle dans lequel le nombre aléatoire doit être généré.
+*
+*/
 int rand_a_b(int a, int b){
 
     return rand()%(b-a) +a;
 
 }
 
+/*!
+*	
+*	\fn int main()
+*	\brief Fonction main du projet.
+*
+*/
 int main() {
 	SDL_Window * fenetre=NULL;
 	SDL_Renderer * renderer=NULL;

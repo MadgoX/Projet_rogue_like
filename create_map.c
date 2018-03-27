@@ -2,7 +2,7 @@
 *
 *	\file create_map.c
 *	\brief Creation des maps
-*	\author Romane BUON, Lucien BOUYEURE, Yann PAULMERY
+*	\author Lucien BOUYEURE, Romane BUON, Yann PAULMERY
 *	\version 0.1
 *
 */

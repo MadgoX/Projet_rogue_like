@@ -2,7 +2,7 @@
 *
 *	\file affichage_map.c
 *	\brief Affichage des maps
-*	\author Romane BUON, Lucien BOUYEURE, Yann PAULMERY
+*	\author Lucien BOUYEURE, Romane BUON, Yann PAULMERY
 *	\version 0.1
 *
 */
@@ -13,7 +13,7 @@
 *	
 *	\fn void affichage_map1(char matrice[N][M])
 *	\brief Afichage de la map du niveau 1.
-*	\param matrice Matice contenant la map du niveau 1.
+*	\param matrice Matrice contenant la map du niveau 1.
 *
 */
 void affichage_map1(char matrice[N][M]){

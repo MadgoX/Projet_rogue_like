@@ -2,7 +2,7 @@
 *
 *	\file map_niveau1.c
 *	\brief Création de la map du niveau 1
-*	\author Romane BUON, Lucien BOUYEURE, Yann PAULMERY
+*	\author Lucien BOUYEURE, Romane BUON, Yann PAULMERY
 *	\version 0.1
 *
 */
@@ -16,7 +16,7 @@ piece_t piece11, piece12, piece13;
 
 /*!
 *	
-*	\fn void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece)
+*	\fn void creer_piece1(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece)
 *	\brief Fonction de création des pièces du niveau 1, avec les portes.
 *		\param matrice Matrice contenant la map du niveau 1.
 *		\param x_haut Ordonnée de l'angle haut-gauche de la pièce.
@@ -28,7 +28,7 @@ piece_t piece11, piece12, piece13;
 *		\param num_piece Numéro de la zone dans laquelle se trouve la pièce à créer (1, 2 ou 3 car il y a 3 pièces dans le niveau 1).
 *
 */
-void creer_piece(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
+void creer_piece1(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
 	int i, j;
@@ -147,13 +147,13 @@ void map_niveau1(char map[N][M]){
 	int x_haut_p3 = rand_a_b(17, 21), y_gauche_p3 = rand_a_b(7, 22);
 
 	/* Création de la première pièce */
-	creer_piece(map, x_haut_p1, y_gauche_p1, 5, 12, 4, 7, 1);
+	creer_piece1(map, x_haut_p1, y_gauche_p1, 5, 12, 4, 7, 1);
 
 	/* Création de la deuxième pièce */
-	creer_piece(map, x_haut_p2, y_gauche_p2, 5, 12, 4, 7, 2);
+	creer_piece1(map, x_haut_p2, y_gauche_p2, 5, 12, 4, 7, 2);
 	
 	/* Création de la troisième pièce */
-	creer_piece(map, x_haut_p3, y_gauche_p3, 19, 25, 4, 7, 3);
+	creer_piece1(map, x_haut_p3, y_gauche_p3, 19, 25, 4, 7, 3);
 }
 
 /*int main(){

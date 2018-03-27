@@ -2,7 +2,7 @@
 *
 *	\file map_niveau3.c
 *	\brief Création de la map du niveau 3
-*	\author Romane BUON, Lucien BOUYEURE, Yann PAULMERY
+*	\author Lucien BOUYEURE, Romane BUON, Yann PAULMERY
 *	\version 0.1
 *
 */
