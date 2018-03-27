@@ -1,71 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include "rogue_like.h"
 
-#define N 50
-#define M 60
 
 //Pieces 1, 2, 3 et 4 du niveau 2
 piece_t piece21, piece22, piece23, piece24;
 
-void creer_map(char matrice[N][M])
-{
-
-	int i, j;
-	char res;
-	
-	for(i=0; i<N; i++){
-		for(j=0; j<M; j++){
-			matrice[i][j]='.';
-		}
-	}
-
-	i=0;
-	for(j=1; j<M-1; j++){
-		matrice[i][j]='=';
-	}
-	
-	j=0;
-	for(i=1; i<N-1; i++){
-		matrice[i][j]='#';
-	}
-
-	j=M-1;
-	for(i=1; i<N-1; i++){
-		matrice[i][j]='#';
-	}
-
-	i=N-1;
-	for(j=1; j<M-1; j++){
-		matrice[i][j]='=';
-	}
-	 
-	i=0;
-	j=0;
-	matrice[i][j]='+';
-
-	i=N-1;
-	j=M-1;
-	matrice[i][j]='+';
-	
-	i=N-1;
-	j=0;
-	matrice[i][j]='+';
-
-	i=0;
-	j=M-1;
-	matrice[i][j]='+';
-
-}
-
-int rand_a_b(int a, int b){
-
-    return rand()%(b-a) +a;
-
-}
-
 /* Fonction de création d'une pièce */
-void creer_piece2(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
+void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
 	int i, j;
@@ -124,7 +67,7 @@ void creer_piece2(char matrice[N][M], int x_haut, int y_gauche, int min_larg, in
 		piece21.x_haut = x_haut;
 		piece21.y_gauche = y_gauche;
 
-		piece21.x_porte1 = piece21.y_porte1 = piece21.position_p1 = NULL;
+		piece21.x_porte1 = piece21.y_porte1 = piece21.position_p1 = 0;
 
 		piece21.x_porte2 = x_porte;
 		piece21.y_porte2 = y_droite;
@@ -166,7 +109,7 @@ void creer_piece2(char matrice[N][M], int x_haut, int y_gauche, int min_larg, in
 		piece23.y_porte1 = y_droite;
 		piece23.position_p1 = 'v';
 
-		piece23.x_porte2 = piece23.y_porte2 = piece23.position_p2 = NULL;
+		piece23.x_porte2 = piece23.y_porte2 = piece23.position_p2 = 0;
 	}
 
 	//Placement de la porte pour la pièce 4
@@ -193,7 +136,7 @@ void creer_piece2(char matrice[N][M], int x_haut, int y_gauche, int min_larg, in
 }
 
 /* Création de la map du niveau 1 */
-void map_niveau2(char map[N][M]){
+void map_niveau2(char map[O][P]){
 
 	int x_haut_p1 = rand_a_b(3, 8), y_gauche_p1 = rand_a_b(3, 8);
 	int x_haut_p2 = rand_a_b(5, 10), y_gauche_p2 = rand_a_b(32, 45);
@@ -213,7 +156,7 @@ void map_niveau2(char map[N][M]){
 	creer_piece2(map, x_haut_p4, y_gauche_p4, 8, 13, 9, 13, 4);
 }
 
-int main(){
+/*int main(){
 	int i, j;
 	char map[N][M];
 
@@ -229,4 +172,4 @@ int main(){
 		}
 		printf("\n");
 	}
-}
+}*/
