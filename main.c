@@ -4,6 +4,12 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 
+int rand_a_b(int a, int b){
+
+    return rand()%(b-a) +a;
+
+}
+
 int main() {
 	SDL_Window * fenetre=NULL;
 	SDL_Renderer * renderer=NULL;
@@ -106,10 +112,10 @@ int main() {
 		map_niveau1(map);
 
 		//Et enfin on place les tresors
-		placement_tresors(map);
+		placement_tresors1(map);
 
 		//Affichage de la map
-		affichage_map(map);
+		affichage_map1(map);
 	}
 
 	else if(niv == 2){
