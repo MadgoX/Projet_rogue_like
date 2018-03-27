@@ -44,4 +44,3 @@ clean:
 	- rm rogue_like
 
 all : rogue_like ${LIBS} ${INCS} ${FLAGS}
-
