@@ -9,11 +9,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include <ncurses.h>
+#include <unistd.h>
 #include "rogue_like.h"
-
-
-//Pieces 1, 2, 3 et 4 du niveau 2
-piece_t piece21, piece22, piece23, piece24;
 
 /*!
 *	

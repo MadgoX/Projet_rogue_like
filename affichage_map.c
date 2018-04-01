@@ -6,8 +6,12 @@
 *	\version 0.1
 *
 */
-#include<stdio.h>
-#include"rogue_like.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
+#include <ncurses.h>
+#include <unistd.h>
+#include "rogue_like.h"
 
 /*!
 *	
@@ -22,9 +26,9 @@ void affichage_map1(char matrice[N][M]){
 	//Affichage de la map
 	for(i = 0; i < N; i++){
 		for(j = 0; j < M; j++){
-			printf("%c",matrice[i][j]);
+			printw("%c",matrice[i][j]);
 		}
-		printf("\n");
+		printw("\n");
 	}
 }
 
@@ -39,11 +43,11 @@ void affichage_map2(char matrice[O][P]){
 	int i, j;
 	
 	//Affichage de la map
-	for(i = 0; i < A; i++){
-		for(j = 0; j < B; j++){
-			printf("%c",matrice[i][j]);
+	for(i = 0; i < O; i++){
+		for(j = 0; j < P; j++){
+			printw("%c",matrice[i][j]);
 		}
-		printf("\n");
+		printw("\n");
 	}
 }
 
@@ -58,10 +62,10 @@ void affichage_map3(char matrice[M][Q]){
 	int i, j;
 	
 	//Affichage de la map
-	for(i = 0; i < C; i++){
-		for(j = 0; j < D; j++){
-			printf("%c",matrice[i][j]);
+	for(i = 0; i < M; i++){
+		for(j = 0; j < Q; j++){
+			printw("%c",matrice[i][j]);
 		}
-		printf("\n");
+		printw("\n");
 	}
 }

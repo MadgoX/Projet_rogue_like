@@ -3,12 +3,12 @@
 *	\file rogue_like.h
 *	\brief Fichier contenant les protoypes de toutes les fonctions du programme
 *	\author Lucien BOUYEURE, Romane BUON, Yann PAULMERY
-*	\version 0.1
+*	\version 1
 *
 */
 #include<stdio.h>
 #include<stdlib.h>
-#include <SDL2/SDL.h>
+//#include <SDL2/SDL.h>
 
 #define N 30
 #define M 50
@@ -37,6 +37,10 @@ typedef struct piece_s{
 	char position_p2;			//vaut h (si la porte est sur le coté haut ou bas de la piece) ou v (si la porte est sur le coté droit ou gauche de la piece)
 } piece_t;
 
+piece_t piece11, piece12, piece13;						//Pieces 1, 2 et 3 du niveau 1
+piece_t piece21, piece22, piece23, piece24;				//Pieces 1, 2, 3 et 4 du niveau 2
+piece_t piece31, piece32, piece33, piece34, piece35;	//Pieces 1, 2, 3, 4 et 5 du niveau 2
+
 void creer_map1(char matrice[N][M]);
 void creer_map2(char matrice[O][P]);
 void creer_map3(char matrice[M][Q]);
@@ -57,6 +61,10 @@ void map_niveau3(char map[M][Q]);
 void affichage_map1(char matrice[N][M]);
 void affichage_map2(char matrice[O][P]);
 void affichage_map3(char matrice[M][Q]);
+
+void jeu1(char matrice[N][M]);
+void jeu2(char matrice[O][P]);
+void jeu3(char matrice[M][Q]);
 
 void placement_tresors1(char matrice[N][M]);
 void placement_tresors2(char matrice[O][P]);

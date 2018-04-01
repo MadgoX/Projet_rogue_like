@@ -20,7 +20,7 @@
 *
 */
 
-void creer_map(char matrice[N][M])
+void creer_map1(char matrice[N][M])
 {
 
 	int i, j;
