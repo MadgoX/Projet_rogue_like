@@ -1,6 +1,6 @@
 # Projet_rogue_like
 
-Programmeurs :
+Développeurs :
   BOUYEURE Lucien,
   BUON Romane,
   PAULMERY Yann
