@@ -12,6 +12,13 @@
 #include <unistd.h>
 #include "rogue_like.h"
 
+/*!
+*	
+*	\fn void jeu1(char map[N][M])
+*	\brief Fonction de jeu du niveau 1.
+*	\param map Matrice contenant le labyrinthe du niveau 1.
+*
+*/
 void jeu1(char map[N][M]){
 	int touche;						//touche sur laquelle le joueur appuie
 	int x_cour, y_cour;
@@ -28,7 +35,7 @@ void jeu1(char map[N][M]){
 	
 	do{
     	touche = getch();                		
-		if((touche == KEY_RIGHT) && (map[x_cour][y_cour+1] != '|') && (map[x_cour][y_cour+1] != '+')){
+		if((touche == KEY_RIGHT) && (map[x_cour][y_cour+1] != '|') && (map[x_cour][y_cour+1] != '+') && (map[x_cour][y_cour+1] != '.')){
 			if(map[x_cour][y_cour+1] == 'o'){
 				cpt_tresors++;
 			}
@@ -43,7 +50,7 @@ void jeu1(char map[N][M]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_LEFT) && (map[x_cour][y_cour-1] != '|') && (map[x_cour][y_cour-1] != '+')){
+		else if((touche == KEY_LEFT) && (map[x_cour][y_cour-1] != '|') && (map[x_cour][y_cour-1] != '+') && (map[x_cour][y_cour-1] != '.')){
 			if(map[x_cour][y_cour-1] == 'o'){
 				cpt_tresors++;
 			}
@@ -58,7 +65,7 @@ void jeu1(char map[N][M]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_DOWN) && (map[x_cour+1][y_cour] != '-') && (map[x_cour+1][y_cour] != '+')){
+		else if((touche == KEY_DOWN) && (map[x_cour+1][y_cour] != '-') && (map[x_cour+1][y_cour] != '+') && (map[x_cour+1][y_cour] != '.')){
 			if(map[x_cour+1][y_cour] == 'o'){
 				cpt_tresors++;
 			}
@@ -73,7 +80,7 @@ void jeu1(char map[N][M]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_UP) && (map[x_cour-1][y_cour] != '-') && (map[x_cour-1][y_cour] != '+')){
+		else if((touche == KEY_UP) && (map[x_cour-1][y_cour] != '-') && (map[x_cour-1][y_cour] != '+') && (map[x_cour-1][y_cour] != '.')){
 			if(map[x_cour-1][y_cour] == 'o'){
 				cpt_tresors++;
 			}
@@ -93,11 +100,18 @@ void jeu1(char map[N][M]){
 		
 		refresh();
 		map[piece11.x_haut][(piece11.y_gauche)+1] = 'A';
-	}while((map[x_cour][y_cour] != 'A'));
+	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors != 1));
 	
 	sleep(1);
 }
 
+/*!
+*	
+*	\fn void jeu2(char map[O][P])
+*	\brief Fonction de jeu du niveau 2.
+*	\param map Matrice contenant le labyrinthe du niveau 2.
+*
+*/
 void jeu2(char map[O][P]){
 	int touche;						//touche sur laquelle le joueur appuie
 	int x_cour, y_cour;
@@ -114,7 +128,7 @@ void jeu2(char map[O][P]){
 	
 	do{
     	touche = getch();                		
-		if((touche == KEY_RIGHT) && (map[x_cour][y_cour+1] != '|') && (map[x_cour][y_cour+1] != '+')){
+		if((touche == KEY_RIGHT) && (map[x_cour][y_cour+1] != '|') && (map[x_cour][y_cour+1] != '+') && (map[x_cour][y_cour+1] != '.')){
 			if(map[x_cour][y_cour+1] == 'o'){
 				cpt_tresors++;
 			}
@@ -129,7 +143,7 @@ void jeu2(char map[O][P]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_LEFT) && (map[x_cour][y_cour-1] != '|') && (map[x_cour][y_cour-1] != '+')){
+		else if((touche == KEY_LEFT) && (map[x_cour][y_cour-1] != '|') && (map[x_cour][y_cour-1] != '+') && (map[x_cour][y_cour-1] != '.')){
 			if(map[x_cour][y_cour-1] == 'o'){
 				cpt_tresors++;
 			}
@@ -144,7 +158,7 @@ void jeu2(char map[O][P]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_DOWN) && (map[x_cour+1][y_cour] != '-') && (map[x_cour+1][y_cour] != '+')){
+		else if((touche == KEY_DOWN) && (map[x_cour+1][y_cour] != '-') && (map[x_cour+1][y_cour] != '+') && (map[x_cour+1][y_cour] != '.')){
 			if(map[x_cour+1][y_cour] == 'o'){
 				cpt_tresors++;
 			}
@@ -159,7 +173,7 @@ void jeu2(char map[O][P]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_UP) && (map[x_cour-1][y_cour] != '-') && (map[x_cour-1][y_cour] != '+')){
+		else if((touche == KEY_UP) && (map[x_cour-1][y_cour] != '-') && (map[x_cour-1][y_cour] != '+') && (map[x_cour-1][y_cour] != '.')){
 			if(map[x_cour-1][y_cour] == 'o'){
 				cpt_tresors++;
 			}
@@ -179,11 +193,18 @@ void jeu2(char map[O][P]){
 		
 		refresh();
 		map[piece21.x_haut][(piece21.y_gauche)+1] = 'A';
-	}while((map[x_cour][y_cour] != 'A'));
+	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors != 1));
 	
 	sleep(1);
 }
 
+/*!
+*	
+*	\fn void jeu3(char map[M][Q])
+*	\brief Fonction de jeu du niveau 2.
+*	\param map Matrice contenant le labyrinthe du niveau 2.
+*
+*/
 void jeu3(char map[M][Q]){
 	int touche;						//touche sur laquelle le joueur appuie
 	int x_cour, y_cour;
@@ -200,7 +221,7 @@ void jeu3(char map[M][Q]){
 	
 	do{
     	touche = getch();                		
-		if((touche == KEY_RIGHT) && (map[x_cour][y_cour+1] != '|') && (map[x_cour][y_cour+1] != '+')){
+		if((touche == KEY_RIGHT) && (map[x_cour][y_cour+1] != '|') && (map[x_cour][y_cour+1] != '+') && (map[x_cour][y_cour+1] != '.')){
 			if(map[x_cour][y_cour+1] == 'o'){
 				cpt_tresors++;
 			}
@@ -215,7 +236,7 @@ void jeu3(char map[M][Q]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_LEFT) && (map[x_cour][y_cour-1] != '|') && (map[x_cour][y_cour-1] != '+')){
+		else if((touche == KEY_LEFT) && (map[x_cour][y_cour-1] != '|') && (map[x_cour][y_cour-1] != '+') && (map[x_cour][y_cour-1] != '.')){
 			if(map[x_cour][y_cour-1] == 'o'){
 				cpt_tresors++;
 			}
@@ -230,7 +251,7 @@ void jeu3(char map[M][Q]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_DOWN) && (map[x_cour+1][y_cour] != '-') && (map[x_cour+1][y_cour] != '+')){
+		else if((touche == KEY_DOWN) && (map[x_cour+1][y_cour] != '-') && (map[x_cour+1][y_cour] != '+') && (map[x_cour+1][y_cour] != '.')){
 			if(map[x_cour+1][y_cour] == 'o'){
 				cpt_tresors++;
 			}
@@ -245,7 +266,7 @@ void jeu3(char map[M][Q]){
 				mvprintw(x_cour, y_cour, "@");
 			}
 		}
-		else if((touche == KEY_UP) && (map[x_cour-1][y_cour] != '-') && (map[x_cour-1][y_cour] != '+')){
+		else if((touche == KEY_UP) && (map[x_cour-1][y_cour] != '-') && (map[x_cour-1][y_cour] != '+') && (map[x_cour-1][y_cour] != '.')){
 			if(map[x_cour-1][y_cour] == 'o'){
 				cpt_tresors++;
 			}
@@ -265,7 +286,7 @@ void jeu3(char map[M][Q]){
 		
 		refresh();
 		map[piece31.x_haut][(piece31.y_gauche)+1] = 'A';
-	}while((map[x_cour][y_cour] != 'A'));
+	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors != 1));
 	
 	sleep(1);
 }
