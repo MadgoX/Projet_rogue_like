@@ -408,20 +408,13 @@ void couloir1(char matrice[N][M], piece_t piece1, piece_t piece2)
 		x_fin = x2 - 2;
 		y_fin = y2;
 		orient_prec = 'v';
-		matrice[x1][y1+1] = '-';
-		matrice[x1][y1-1] = '-';
-		matrice[x2][y2+1] = '-';
-		matrice[x2][y2-1] = '-';
+		matrice[x1][y1-1] = '+';
+		matrice[x2][y2+1] = '+';
+		matrice[x2][y2-1] = '+';
 		matrice[x1+1][y1+1] = '+';
 		matrice[x1+1][y1-1] = '+';
 		matrice[x2-1][y2+1] = '+';
 		matrice[x2-1][y2-1] = '+';
-
-		matrice[x1][y1+2] = '-';
-		matrice[x1][y1-2] = '-';
-
-		matrice[x2][y2+2] = '-';
-		matrice[x2][y2-2] = '-';
 
 		matrice[x1+1][y1] = ' ';
 		matrice[x2-1][y2] = ' ';
@@ -441,12 +434,6 @@ void couloir1(char matrice[N][M], piece_t piece1, piece_t piece2)
 		matrice[x1-1][y1+1] = '+';
 		matrice[x2+1][y2-1] = '+';
 		matrice[x2-1][y2-1] = '+';
-
-		matrice[x1+2][y1] = '|';
-		matrice[x1-2][y1] = '|';
-
-		matrice[x2+2][y2] = '|';
-		matrice[x2-2][y2] = '|';
 
 		matrice[x1][y1+1] = ' ';
 		matrice[x2][y2-1] = ' ';
@@ -688,20 +675,13 @@ void couloir2(char matrice[O][P], piece_t piece1, piece_t piece2)
 		x_fin = x2 - 2;
 		y_fin = y2;
 		orient_prec = 'v';
-		matrice[x1][y1+1] = '-';
-		matrice[x1][y1-1] = '-';
-		matrice[x2][y2+1] = '-';
-		matrice[x2][y2-1] = '-';
+		matrice[x1][y1-1] = '+';
+		matrice[x2][y2+1] = '+';
+		matrice[x2][y2-1] = '+';
 		matrice[x1+1][y1+1] = '+';
 		matrice[x1+1][y1-1] = '+';
 		matrice[x2-1][y2+1] = '+';
 		matrice[x2-1][y2-1] = '+';
-
-		matrice[x1][y1+2] = '-';
-		matrice[x1][y1-2] = '-';
-
-		matrice[x2][y2+2] = '-';
-		matrice[x2][y2-2] = '-';
 
 		matrice[x1+1][y1] = ' ';
 		matrice[x2-1][y2] = ' ';
@@ -721,12 +701,6 @@ void couloir2(char matrice[O][P], piece_t piece1, piece_t piece2)
 		matrice[x1-1][y1+1] = '+';
 		matrice[x2+1][y2-1] = '+';
 		matrice[x2-1][y2-1] = '+';
-
-		matrice[x1+2][y1] = '|';
-		matrice[x1-2][y1] = '|';
-
-		matrice[x2+2][y2] = '|';
-		matrice[x2-2][y2] = '|';
 
 		matrice[x1][y1+1] = ' ';
 		matrice[x2][y2-1] = ' ';
@@ -968,20 +942,13 @@ void couloir3(char matrice[M][Q], piece_t piece1, piece_t piece2)
 		x_fin = x2 - 2;
 		y_fin = y2;
 		orient_prec = 'v';
-		matrice[x1][y1+1] = '-';
-		matrice[x1][y1-1] = '-';
-		matrice[x2][y2+1] = '-';
-		matrice[x2][y2-1] = '-';
+		matrice[x1][y1-1] = '+';
+		matrice[x2][y2+1] = '+';
+		matrice[x2][y2-1] = '+';
 		matrice[x1+1][y1+1] = '+';
 		matrice[x1+1][y1-1] = '+';
 		matrice[x2-1][y2+1] = '+';
 		matrice[x2-1][y2-1] = '+';
-
-		matrice[x1][y1+2] = '-';
-		matrice[x1][y1-2] = '-';
-
-		matrice[x2][y2+2] = '-';
-		matrice[x2][y2-2] = '-';
 
 		matrice[x1+1][y1] = ' ';
 		matrice[x2-1][y2] = ' ';
@@ -1001,12 +968,6 @@ void couloir3(char matrice[M][Q], piece_t piece1, piece_t piece2)
 		matrice[x1-1][y1+1] = '+';
 		matrice[x2+1][y2-1] = '+';
 		matrice[x2-1][y2-1] = '+';
-
-		matrice[x1+2][y1] = '|';
-		matrice[x1-2][y1] = '|';
-
-		matrice[x2+2][y2] = '|';
-		matrice[x2-2][y2] = '|';
 
 		matrice[x1][y1+1] = ' ';
 		matrice[x2][y2-1] = ' ';
