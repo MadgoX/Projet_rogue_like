@@ -179,6 +179,10 @@ void map_niveau2(char map[O][P]){
 	
 	/* Création de la quatrième pièce */
 	creer_piece2(map, x_haut_p4, y_gauche_p4, 8, 13, 9, 13, 4);
+
+	couloir2(map, piece21, piece22);
+	couloir2(map, piece22, piece23);
+	couloir2(map, piece23, piece24);
 }
 
 /*int main(){

@@ -6,9 +6,12 @@
 *	\version 1
 *
 */
+
+#ifndef ROGUE_H
+#define ROGUE_H
+
 #include<stdio.h>
 #include<stdlib.h>
-//#include <SDL2/SDL.h>
 
 #define N 30
 #define M 50
@@ -70,4 +73,15 @@ void placement_tresors1(char matrice[N][M]);
 void placement_tresors2(char matrice[O][P]);
 void placement_tresors3(char matrice[M][Q]);
 
+void dijkstra1(int compt[N][M], piece_t piece1, piece_t piece2, int x, int y, int val);
+void dijkstra2(int compt[O][P], piece_t piece1, piece_t piece2, int x, int y, int val);
+void dijkstra3(int compt[M][Q], piece_t piece1, piece_t piece2, int x, int y, int val);
+
+void couloir1(char matrice[N][M], piece_t piece1, piece_t piece2);
+void couloir2(char matrice[O][P], piece_t piece1, piece_t piece2);
+void couloir3(char matrice[M][Q], piece_t piece1, piece_t piece2);
+
+
 int main(void);
+
+#endif

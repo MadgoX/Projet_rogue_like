@@ -3,7 +3,7 @@ LVL2 = map_niveau2
 LVL3 = map_niveau3
 MAP = create_map
 TRES = tresors
-COUL = placement_coul
+COUL = couloir
 AFF = affichage_map
 PAR = partie
 CC = gcc
@@ -16,8 +16,8 @@ FLAGS = -lncurses
 #INCS=-I${SDL_INC_DIR}
 PROG=rogue_like
 
-${PROG} : main.o ${MAP}.o ${TRES}.o ${PAR}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o
-	${CC} main.o ${MAP}.o ${TRES}.o ${PAR}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o -o ${PROG} ${FLAGS}
+${PROG} : main.o ${MAP}.o ${TRES}.o ${PAR}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o ${COUL}.o
+	${CC} main.o ${MAP}.o ${TRES}.o ${PAR}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o ${COUL}.o -o ${PROG} ${FLAGS}
 	#${CC} main.o ${MAP}.o ${TRES}.o ${PAR}.o ${LVL1}.o ${LVL2}.o ${LVL3}.o ${AFF}.o -o ${PROG} ${LIBS} ${INCS} ${FLAGS}
 
 main.o : main.c
@@ -52,6 +52,8 @@ ${LVL3}.o: ${LVL3}.c
 	${CC} -c ${LVL3}.c ${FLAGS}
 	#${CC} -c ${LVL3}.c ${LIBS} ${INCS} ${FLAGS}
 
+${COUL}.o: ${COUL}.c
+	${CC} -c ${COUL}.c ${FLAGS}
 
 clean:
 	- rm *.o

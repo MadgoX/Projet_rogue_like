@@ -153,6 +153,11 @@ void map_niveau1(char map[N][M]){
 	
 	/* Création de la troisième pièce */
 	creer_piece1(map, x_haut_p3, y_gauche_p3, 19, 25, 4, 7, 3);
+
+	couloir1(map, piece11, piece12);
+	couloir1(map, piece12, piece13);
+
+
 }
 
 /*int main(){
