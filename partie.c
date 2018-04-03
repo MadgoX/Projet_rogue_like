@@ -103,8 +103,8 @@ void jeu2(char map[O][P]){
 	int x_cour, y_cour;
 	int cpt_tresors = 0;			//compteur du nombre de trésors découverts par le joueur
 	
-	x_cour = piece11.x_haut;
-	y_cour = (piece11.y_gauche)+1;
+	x_cour = piece21.x_haut;
+	y_cour = (piece21.y_gauche)+1;
 
 	mvprintw(x_cour, y_cour, "@");	//position du personnage au début de la partie
 
@@ -178,7 +178,7 @@ void jeu2(char map[O][P]){
 		else if((touche == KEY_RIGHT) && (touche == KEY_LEFT) && (touche == KEY_DOWN) && (touche == KEY_UP));
 		
 		refresh();
-		map[piece11.x_haut][(piece11.y_gauche)+1] = 'A';
+		map[piece21.x_haut][(piece21.y_gauche)+1] = 'A';
 	}while((map[x_cour][y_cour] != 'A'));
 	
 	sleep(1);
@@ -189,8 +189,8 @@ void jeu3(char map[M][Q]){
 	int x_cour, y_cour;
 	int cpt_tresors = 0;			//compteur du nombre de trésors découverts par le joueur
 	
-	x_cour = piece11.x_haut;
-	y_cour = (piece11.y_gauche)+1;
+	x_cour = piece31.x_haut;
+	y_cour = (piece31.y_gauche)+1;
 
 	mvprintw(x_cour, y_cour, "@");	//position du personnage au début de la partie
 
@@ -264,7 +264,7 @@ void jeu3(char map[M][Q]){
 		else if((touche == KEY_RIGHT) && (touche == KEY_LEFT) && (touche == KEY_DOWN) && (touche == KEY_UP));
 		
 		refresh();
-		map[piece11.x_haut][(piece11.y_gauche)+1] = 'A';
+		map[piece31.x_haut][(piece31.y_gauche)+1] = 'A';
 	}while((map[x_cour][y_cour] != 'A'));
 	
 	sleep(1);
