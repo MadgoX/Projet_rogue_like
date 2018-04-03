@@ -69,9 +69,9 @@ void jeu1(char matrice[N][M]);
 void jeu2(char matrice[O][P]);
 void jeu3(char matrice[M][Q]);
 
-void placement_tresors1(char matrice[N][M]);
-void placement_tresors2(char matrice[O][P]);
-void placement_tresors3(char matrice[M][Q]);
+void placement_tresor1(char matrice[N][M], piece_t piece);
+void placement_tresor2(char matrice[O][P], piece_t piece);
+void placement_tresor3(char matrice[M][Q], piece_t piece);
 
 void dijkstra1(int compt[N][M], piece_t piece1, piece_t piece2, int x, int y, int val);
 void dijkstra2(int compt[O][P], piece_t piece1, piece_t piece2, int x, int y, int val);
