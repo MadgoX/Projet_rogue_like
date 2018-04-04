@@ -6,7 +6,6 @@
 *	\version 0.1
 *
 */
-
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
@@ -28,7 +27,6 @@
 *		\param num_piece Numéro de la zone dans laquelle se trouve la pièce à créer (1, 2 ou 3 car il y a 3 pièces dans le niveau 1).
 *
 */
-
 void creer_piece1(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
@@ -141,7 +139,6 @@ void creer_piece1(char matrice[N][M], int x_haut, int y_gauche, int min_larg, in
 *	\param matrice Matrice contenant la map du niveau 1.
 *
 */
-
 void map_niveau1(char map[N][M]){
 
 	int x_haut_p1 = rand_a_b(2, 7), y_gauche_p1 = rand_a_b(2, 12);
@@ -160,4 +157,23 @@ void map_niveau1(char map[N][M]){
 	couloir1(map, piece11, piece12);
 	couloir1(map, piece12, piece13);
 
+
 }
+
+/*int main(){
+	int i, j;
+	char map[N][M];
+
+	//Appel de la fonction qui créé le tour de la map
+	creer_map(map);
+
+	map_niveau1(map);
+
+	//Affichage de la map
+	for(i = 0; i < N; i++){
+		for(j = 0; j < M; j++){
+			printf("%c",map[i][j]);
+		}
+		printf("\n");
+	}
+}*/

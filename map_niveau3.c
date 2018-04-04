@@ -6,10 +6,9 @@
 *	\version 0.1
 *
 */
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 #include <ncurses.h>
 #include <unistd.h>
 #include "rogue_like.h"
@@ -28,7 +27,6 @@
 *		\param num_piece Numéro de la zone dans laquelle se trouve la pièce à créer (1, 2, 3, 4 ou 5 car il y a 5 pièces dans le niveau 3).
 *
 */
-
 void creer_piece3(char matrice[M][Q], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
@@ -187,7 +185,6 @@ void creer_piece3(char matrice[M][Q], int x_haut, int y_gauche, int min_larg, in
 *	\param matrice Matrice contenant la map du niveau 3.
 *
 */
-
 void map_niveau3(char map[M][Q]){
 
 	int x_haut_p1 = rand_a_b(3, 8), y_gauche_p1 = rand_a_b(3, 8);
@@ -211,8 +208,27 @@ void map_niveau3(char map[M][Q]){
 	/* Création de la cinquième pièce */
 	creer_piece3(map, x_haut_p5, y_gauche_p5, 34, 44, 13, 18, 5);
 
+
 	couloir3(map, piece31, piece32);
 	couloir3(map, piece32, piece33);
-	couloir3(map, piece33, piece34);
-	couloir3(map, piece34, piece35);
+	couloir3(map, piece33, piece35);
+	couloir3(map, piece35, piece34);
 }
+
+/*int main(){
+	int i, j;
+	char map[N][M];
+
+	//Appel de la fonction qui créé le tour de la map
+	creer_map(map);
+
+	map_niveau3(map);
+
+	//Affichage de la map
+	for(i = 0; i < N; i++){
+		for(j = 0; j < M; j++){
+			printf("%c",map[i][j]);
+		}
+		printf("\n");
+	}
+}*/

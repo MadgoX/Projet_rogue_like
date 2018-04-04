@@ -6,10 +6,9 @@
 *	\version 0.1
 *
 */
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
 #include <ncurses.h>
 #include <unistd.h>
 #include "rogue_like.h"
@@ -28,7 +27,6 @@
 *		\param num_piece Numéro de la zone dans laquelle se trouve la pièce à créer (1, 2, 3 ou 4 car il y a 4 pièces dans le niveau 2).
 *
 */
-
 void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece){
 	//x_haut et y_gauche sont les coordonnées du coin haut gauche de la pièce
 
@@ -131,6 +129,7 @@ void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, in
 		piece23.position_p1 = 'v';
 
 		piece23.x_porte2 = piece23.y_porte2 = piece23.position_p2 = 0;
+
 	}
 
 	//Placement de la porte pour la pièce 4
@@ -163,7 +162,6 @@ void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, in
 *	\param matrice Matrice contenant la map du niveau 2.
 *
 */
-
 void map_niveau2(char map[O][P]){
 
 	int x_haut_p1 = rand_a_b(3, 8), y_gauche_p1 = rand_a_b(3, 8);
@@ -183,7 +181,27 @@ void map_niveau2(char map[O][P]){
 	/* Création de la quatrième pièce */
 	creer_piece2(map, x_haut_p4, y_gauche_p4, 8, 13, 9, 13, 4);
 
+
 	couloir2(map, piece21, piece22);
-	couloir2(map, piece22, piece23);
-	couloir2(map, piece23, piece24);
+	couloir2(map, piece22, piece24);
+	couloir2(map, piece24, piece23);
+
 }
+
+/*int main(){
+	int i, j;
+	char map[N][M];
+
+	//Appel de la fonction qui créé le tour de la map
+	creer_map(map);
+
+	map_niveau2(map);
+
+	//Affichage de la map
+	for(i = 0; i < N; i++){
+		for(j = 0; j < M; j++){
+			printf("%c",map[i][j]);
+		}
+		printf("\n");
+	}
+}*/
