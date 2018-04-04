@@ -208,10 +208,11 @@ void map_niveau3(char map[M][Q]){
 	/* Création de la cinquième pièce */
 	creer_piece3(map, x_haut_p5, y_gauche_p5, 34, 44, 13, 18, 5);
 
+
 	couloir3(map, piece31, piece32);
 	couloir3(map, piece32, piece33);
-	couloir3(map, piece33, piece34);
-	couloir3(map, piece34, piece35);
+	couloir3(map, piece33, piece35);
+	couloir3(map, piece35, piece34);
 }
 
 /*int main(){

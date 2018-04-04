@@ -129,6 +129,7 @@ void creer_piece2(char matrice[O][P], int x_haut, int y_gauche, int min_larg, in
 		piece23.position_p1 = 'v';
 
 		piece23.x_porte2 = piece23.y_porte2 = piece23.position_p2 = 0;
+
 	}
 
 	//Placement de la porte pour la pièce 4
@@ -180,9 +181,11 @@ void map_niveau2(char map[O][P]){
 	/* Création de la quatrième pièce */
 	creer_piece2(map, x_haut_p4, y_gauche_p4, 8, 13, 9, 13, 4);
 
+
 	couloir2(map, piece21, piece22);
-	couloir2(map, piece22, piece23);
-	couloir2(map, piece23, piece24);
+	couloir2(map, piece22, piece24);
+	couloir2(map, piece24, piece23);
+
 }
 
 /*int main(){
