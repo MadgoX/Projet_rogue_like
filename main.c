@@ -74,7 +74,7 @@ int main(){
 	
 	map_niveau3(map3);				//Creation des pieces
 		
-	placement_tresor3(map3, piece35);		//Placement des tresors
+	placement_tresor3(map3, piece34);		//Placement des tresors
 
 	affichage_map3(map3);			//Affichage de la map
 	
