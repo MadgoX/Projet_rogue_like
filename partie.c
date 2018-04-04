@@ -100,7 +100,7 @@ void jeu1(char map[N][M]){
 		
 		refresh();
 		map[piece11.x_haut][(piece11.y_gauche)+1] = 'A';
-	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors != 1));
+	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors < 1));
 	
 	sleep(1);
 }
@@ -193,7 +193,7 @@ void jeu2(char map[O][P]){
 		
 		refresh();
 		map[piece21.x_haut][(piece21.y_gauche)+1] = 'A';
-	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors != 1));
+	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors < 1));
 	
 	sleep(1);
 }
@@ -286,7 +286,7 @@ void jeu3(char map[M][Q]){
 		
 		refresh();
 		map[piece31.x_haut][(piece31.y_gauche)+1] = 'A';
-	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors != 1));
+	}while((map[x_cour][y_cour] != 'A') || (cpt_tresors < 1));
 	
 	sleep(1);
 }
