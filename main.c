@@ -27,17 +27,6 @@ int rand_a_b(int a, int b){
 
 }
 
-void afficher_matrice(char matrice[O][P]){
-	for (int i = 0; i < O; i++)
-	{
-		for (int j = 0; j < P; j++)
-		{
-			printf("%c", matrice[i][j]);
-		}
-		printf("\n");
-	}
-}
-
 /*!
 *	
 *	\fn int main()
@@ -70,7 +59,6 @@ int main(){
 	creer_map2(map2);				//Creation de la matrice et de ses bordures
 	
 	map_niveau2(map2);				//Creation des pieces
-//afficher_matrice(map2);
 	
 	placement_tresor2(map2, piece24);		//Placement des tresors
 
