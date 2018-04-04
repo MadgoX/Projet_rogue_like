@@ -657,27 +657,7 @@ void couloir1(char matrice[N][M], piece_t piece1, piece_t piece2)
 		y_fin = y2 + 2;
 		orient_prec = 'h';
 		matrice[x1+1][y1] = '+';
-		matrice[x1-1][y1] = '+';int x_haut_p1 = rand_a_b(3, 8), y_gauche_p1 = rand_a_b(3, 8);
-	int x_haut_p2 = rand_a_b(5, 10), y_gauche_p2 = rand_a_b(32, 45);
-	int x_haut_p3 = rand_a_b(27, 32), y_gauche_p3 = rand_a_b(3, 8);
-	int x_haut_p4 = rand_a_b(27, 37), y_gauche_p4 = rand_a_b(32, 45);
-
-	/* Création de la première pièce */
-	creer_piece2(map, x_haut_p1, y_gauche_p1, 5, 15, 7, 11, 1);
-	
-	/* Création de la deuxième pièce */
-	creer_piece2(map, x_haut_p2, y_gauche_p2, 7, 15, 4, 9, 2);
-	
-	/* Création de la troisième pièce */
-	creer_piece2(map, x_haut_p3, y_gauche_p3, 8, 13, 9, 15, 3);
-	
-	/* Création de la quatrième pièce */
-	creer_piece2(map, x_haut_p4, y_gauche_p4, 8, 13, 9, 13, 4);
-
-
-	couloir2(map, piece21, piece22);
-	couloir2(map, piece22, piece24);
-	couloir2(map, piece24, piece23);
+		matrice[x1-1][y1] = '+';
 		matrice[x2+1][y2] = '+';
 		matrice[x2-1][y2] = '+';
 		matrice[x1+1][y1-1] = '+';
