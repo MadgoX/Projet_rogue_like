@@ -48,9 +48,6 @@ void creer_map1(char matrice[N][M]);
 void creer_map2(char matrice[O][P]);
 void creer_map3(char matrice[M][Q]);
 
-int tresorx(int longueur);
-int tresory(int largeur);
-
 int rand_a_b(int a, int b);
 
 void creer_piece1(char matrice[N][M], int x_haut, int y_gauche, int min_larg, int max_larg, int min_haut, int max_haut, int num_piece);
@@ -80,7 +77,6 @@ void dijkstra3(int compt[M][Q], piece_t piece1, piece_t piece2, int x, int y, in
 void couloir1(char matrice[N][M], piece_t piece1, piece_t piece2);
 void couloir2(char matrice[O][P], piece_t piece1, piece_t piece2);
 void couloir3(char matrice[M][Q], piece_t piece1, piece_t piece2);
-
 
 int main(void);
 
