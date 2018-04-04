@@ -12,7 +12,7 @@ Pour compiler le jeu, il faut avoir téléchargé la bibliothèque ncurses. Cela
   sudo apt-get install libncurses5-dev
 
 Pour compiler le jeu :
-Ouvrir un terminal dans le répertoire du jeu et compiler à l'aide de la commande : make all
+Ouvrir un terminal EN PLEIN ECRAN dans le répertoire du jeu et compiler à l'aide de la commande : make clean all
 
 Pour lancer le jeu :
-Dans le terminal, après avoir compilé, lancer le jeu à l'aide de la commande : ./rogue_like
+Dans le terminal, après avoir compilé, vérifier qu'il est en plein écran puis lancer le jeu à l'aide de la commande : ./rogue_like
