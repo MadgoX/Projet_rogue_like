@@ -1,7 +1,7 @@
 /*!
 *
-*	\file main.c
-*	\brief Fonction main du projet
+*	\file couloir.c
+*	\brief Génération des couloirs
 *	\author Lucien BOUYEURE, Romane BUON, Yann PAULMERY
 *	\version 3.0
 *
